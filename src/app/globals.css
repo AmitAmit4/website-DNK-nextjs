@@ -2,32 +2,409 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+node_modules/owl.carousel/dist/assets/owl.carousel.css
+  node_modules/owl.carousel/dist/assets/owl.theme.default.css
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+#main-section {
+  background-image: url("/pictures/home-new-bg-free-img.jpg");
+  width: 100%;
+  height: 110vh;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* Ensure that the ::before pseudo-element is positioned relative to this element */
+  z-index: 0; /* Make sure this section is on the same layer or above, not behind */
+  background-color: #17669150;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+#main-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: #0c415c;
+  /* background-image: linear-gradient(
+    180deg,
+    #0084d6 -50%,
+    var(--e-global-color-astglobalcolor7) 100%
+  ); */
+  z-index: 1;
+  pointer-events: none;
+}
+#navbar {
+  background-color: #15618d71;
+  position: relative;
+  /* opacity: 0.5; */
+  color: white;
+  z-index: 1;
+}
+#navbar p {
+  margin-bottom: 0px;
+}
+.first-section {
+  position: relative;
+  z-index: 1;
+  height: 70%;
+  align-content: center;
+}
+.first-section h1 {
+  line-height: 75px;
+  word-spacing: 0.5px;
+  margin-left: 60px;
+  word-spacing: 0px;
+}
+.first-section h3 {
+  line-height: 75px;
+  margin-left: 60px;
+  align-content: center;
+}
+.first-section button {
+  margin-left: 60px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.fs-btn-1 {
+  color: #000038;
+  width: 140px;
+  background-color: white;
+  font-size: 13px;
+  padding: 7px 10px;
+  font-weight: 500;
+}
+.fs-btn-1:hover {
+  background-color: black !important;
+  color: white !important;
+}
+.fs-btn-2:hover {
+  background-color: white !important;
+  color: #000038 !important;
+}
+.second-section-cart-1,
+.second-section-cart-2,
+.second-section-cart-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 400px;
+  width: 32%;
+  padding: 30px;
+  background-position: center center;
+  background-size: cover;
+}
+.second-section-cart {
+  padding: 100px;
+}
+.second-section-cart-1 {
+  background-image: url("/pictures/women-fashion-free-img.jpg");
+  position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+}
+
+.second-section-cart-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: 0; /* Make sure this is behind the content */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.second-section-cart-1 h2,
+.second-section-cart-1 p,
+.second-section-cart-1 button {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.second-section-cart-1 h2,
+.second-section-cart-2 h2 {
+  height: 80px;
+  align-content: end;
+  position: relative;
+  z-index: 1;
+}
+
+.second-section-cart-1 button,
+.second-section-cart-2 button,
+.second-section-cart-3 button {
+  background-color: white;
+  padding: 7px 10px;
+}
+.second-section-cart-1 h2,
+.second-section-cart-2 h2,
+.second-section-cart-3 h2 {
+  font-size: 23px;
+  line-height: 32px;
+}
+.second-section-cart-1 p,
+.second-section-cart-2 p,
+.second-section-cart-3 p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.second-section-cart-2 {
+  background-image: url("/pictures/men-fashion-free-img.jpg");
+  position: relative;
+}
+.second-section-cart-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: 0; /* Make sure this is behind the content */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.second-section-cart-2 h2,
+.second-section-cart-2 p,
+.second-section-cart-2 button {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+.second-section-cart-3 {
+  background-image: url("/pictures/footwear-free-img.jpg");
+  position: relative;
+}
+.second-section-cart-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: 0; /* Make sure this is behind the content */
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+.second-section-cart-3 h2,
+.second-section-cart-3 p,
+.second-section-cart-3 button {
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+.second-section {
+  margin-top: 100px;
+}
+.third-section-carts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the carts horizontally */
+  gap: 5px;
+  
+}
+.third-section {
+  /* width: 96vw; */
+  /* margin: 100px auto; */
+  padding: 100px 8px;
+  margin: auto;
+  background-color: #f5f7f9;
+}
+.third-section-cart {
+  width: 240px; /* Make all carts uniform in size */
+  margin: 0; /* Remove the auto margin to avoid centering */
+}
+/* Add this to your global CSS file, e.g., styles/globals.css */
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.logo {
+  width: 100%;
+  height: auto;
+}
+.fourth-section {
+  position: relative;
+  background-image: url("/pictures/banner-03.jpg");
+  width: 98vw;
+  height: 450px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px;
+  color: white;
+  overflow: hidden;
+}
+.fourth-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4ca4e512;
+  z-index: 1; /* Ensure overlay is below the text content */
+}
+.fourth-section-description {
+  position: relative;
+  width: 60%;
+  z-index: 2;
+}
+.fifth-section {
+  padding: 100px;
+}
+.sixth-section {
+  padding: 40px 70px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.sixth-section h3 {
+  font-size: 23px;
+  color: black;
+  font-weight: 600;
+}
+.sixth-section h3:hover {
+  color: #0d6da8;
+}
+.subs-btn {
+  padding: 12px 23px;
+  background-color: #0084d6;
+  color: white;
+}
+.subs-input {
+  border: 1px solid #e2e2e2;
+  margin-bottom: 20px;
+}
+.subs-input:focus {
+  outline: none; /* Remove the focus outline */
+  border: none;
+}
+.subs-input::placeholder {
+  color: #75758b;
+  font-size: 15px;
+}
+.footer {
+  padding: 60px;
+}
+.footer h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer img {
+  padding-bottom: 30px;
+}
+.footer ul {
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  list-style-type: none; /* Remove default list styling */
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 28px;
+}
+.footer ul li:hover {
+  color: #0d6da8;
+  cursor: pointer;
+}
+
+.slick-slide div{
+  margin: 45px 15px 0 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .fifth-section h1 {
+    font-size: 50px;
+    width: 100%;.slider-container div{
+      margin: 0 1rem;
+    }
+    line-height: 65px;
+  }
+  .first-section-buttons {
+    width: 344px;
+  }
+  .nav-right-sec {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 992px) {
+  .first-section h1{
+    line-height: 50px;
+    font-size: 28px;
+    width: 120%;
+  }
+  .first-section h3{
+    line-height: 50px;
+    width: 120%;
+  }
+
+.first-section-buttons .first_section_btn2{
+  margin-left: 20px !important;
+}
+.first-section .first-section-buttons{
+  width:200% !important;
+}
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+  .second-section-cart{
+    padding:100px 40px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media screen and (max-width: 576px) {
+   .nav_about_section{
+     visibility: hidden;
+   }
+   .second-section{
+    margin-top: 200px;
+   }
+   .second-section-cart {
+    padding: 0px;
+  }
+  .second-section-cart-1,
+.second-section-cart-2,
+.second-section-cart-3{
+  width:100%;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.slick-slide div{
+  margin: 10px 15px 10px 15px;
+}
+.fourth-section{
+  background-position: right;
+  padding: 100px 40px;
+}
+.fourth-section-description{
+  width: 80vw;
+}
+}
+@media screen and (max-width: 400px) {
+  .first-section-buttons .first_section_btn2{
+    margin-top: 20px;
+    margin-left: 60px !important;
+    padding: 8px 30px !important;
+   }
+   .second-section-cart {
+    padding: 0px !important;
+  }
+  .fourth-section-description{
+    width:100%;
   }
 }
